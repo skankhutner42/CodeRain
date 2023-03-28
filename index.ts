@@ -13,7 +13,7 @@ const rain = () => {
     ctx.fillStyle = '#0f0'
     Arr.forEach((item, index) => {
         ctx.fillText(strArr[Math.floor(Math.random() * strArr.length)], index * 10, item + 10)
-        Arr[index] = item > canvas.height ? 0 : item + 10
+        Arr[index] = item > canvas.height || item > 10000 * Math.random() ? 0 : item + 10
     })
 }
 
